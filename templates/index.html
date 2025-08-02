@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Journal Formatter</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, select { display: block; margin: 10px 0; padding: 5px; }
+    button { padding: 8px 12px; }
+  </style>
+</head>
+<body>
+  <h2>Journal Submission Portal</h2>
+
+  <form method="POST" action="/preview" enctype="multipart/form-data">
+    <label for="student_id">Select Student ID:</label>
+    <select id="student_id" name="student_id" required onchange="fillName()">
+      <option value="">-- Select ID --</option>
+      {% for student in students %}
+        <option value="{{ student['ID'] }}">{{ student['ID'] }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="student_name">Name:</label>
+    <input type="text" id="student_name" name="student_name" readonly>
+
+    <label for="html_file">Upload HTML File:</label>
+    <input type="file" name="html_file" accept=".html" required>
+
+    <button type="submit">Convert to Journal Format</button>
+  </form>
+
+  <script>
+    const studentMap = {{ student_map | safe }};
+    function fillName() {
+      const id = document.getElementById('student_id').value;
+      document.getElementById('student_name').value = studentMap[id] || '';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+		<title> FORM ATTRIBUTE
+		</title>
+		<style>
+		body{
+			background:linear-gradient(to right, #f5cb42, #b6f542, #42f5dd);
+		}
+		
+		</style>
+	</head>
+	<body>
+		<FORM ACTION="FORM-ART.HTML" METHOD="GET" AUTOCOMPLETE = "ON" NOVALIDATE>
+			<TABLE align="center">
+				<TR>
+					<TH COLSPAN="3">REGISTRATION FORM</TH>
+				</TR>
+				<TR>
+					<TD>NAME</TD>
+					<TD>:</TD>
+					<TD><INPUT TYPE='TEXTBOX' NAME='N' REQUIRED></TD>
+				</TR>
+					<TD>PASSPORT SIZE PHOTO</TD>
+					<TD>:</TD>
+					<TD><INPUT TYPE='FILE' NAME='P'></TD>
+				<TR>
+					<TD>HOBBIES</TD>
+					<TD>:</TD>
+					<TD>
+						<INPUT TYPE='CHECKBOX' NAME='H' VALUE="SINGING">SINGING
+						<INPUT TYPE='CHECKBOX' NAME='H' VALUE="DANSING">DANCING
+						<INPUT TYPE='CHECKBOX' NAME='H' VALUE="READING">READING
+						<INPUT TYPE='CHECKBOX' NAME='H' VALUE="EATING">EATING		
+					</TD>
+				</TR>	
+				<TR>
+					<TD>GENDER</TD>
+					<TD>:</TD>
+					<TD>
+						<INPUT TYPE='RADIO' NAME='G' VALUE="MALE">MALE
+						<INPUT TYPE='RADIO' NAME='G' VALUE="FEMALE">FEMALE
+						<INPUT TYPE='RADIO' NAME='G' VALUE="OTHERS">OTHERS						
+					</TD>	
+				</TR>
+				<TR>
+					<TD>CONTACT</TD>
+					<TD>:</TD>
+					<TD><INPUT TYPE="NUMBER" NAME="C" REQUIRED></TD>
+				</TR>
+				<TR>
+					<TD>DOB</TD>
+					<TD>:</TD>
+					<TD><INPUT TYPE="DATE" NAME="D" REQUIRED></TD>
+				</TR>
+				<TR>
+					<TD>ADDRESS</TD>
+					<TD>:</TD>
+					<TD>
+						<TEXTAREA NAME="A" ROWS="5">
+						</TEXTAREA>
+					</TD>
+				</TR>
+				<TR>
+					<TD>COLOR</TD>
+					<TD>:</TD>
+					<TD><INPUT TYPE="COLOR" NAME="COLOR" REQUIRED></TD>
+				</TR>
+					<TD>COURSE</TD>
+					<TD>:</TD>
+					<TD>
+						<SELECT NAME="CO">
+							<OPTION>SELECT ANY ONE</OPTION>
+							<OPTION>1</OPTION>
+							<OPTION>2</OPTION>
+							<OPTION>3</OPTION>
+							<OPTION>4</OPTION>
+							<OPTION>5</OPTION>
+							<OPTION>6</OPTION>			
+					</TD>
+				
+				<TR>
+				<TD>STATE</TD>
+					<TD>:</TD>
+					<TD>
+					<INPUT LIST="STATE" NAME="S">
+					<DATALIST ID="STATE">
+						<OPTION VALUE="GUJARAT">
+						<OPTION VALUE="MAHARASHTRA">
+						<OPTION VALUE="PUNJAB">
+						<OPTION VALUE="UP">
+						<OPTION VALUE="GOA">
+					</DATALIST>
+					</TD>
+				</TR>
+				<TR>
+					<TH COLSPAN="3">
+						<INPUT TYPE="SUBMIT">
+						<INPUT TYPE="RESET">
+						<INPUT TYPE="BUTTON" VALUE="Next" ONCLICK="alert('Hellow Sybca')">
+					</TH>
+				<TR>
+				
+			</TABLE>
+	</body>
+</html>
